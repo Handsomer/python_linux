@@ -20,8 +20,7 @@ def std_in():
     执行 c:   python std_in.py file_path file_path
     """
     for line in sys.stdin:
-        print(line,end='')
-
+        print(line, end='')
 
 
 def file_input():
@@ -29,8 +28,9 @@ def file_input():
     descript: 标准输入的方法二,此方法调用时可以传入多个文件
     """
     for line in fileinput.input():
-        meta = [fileinput.filename(), fileinput.fileno(), fileinput.filelineno(), fileinput.isfirstline(), fileinput.isstdin()]
-        print(*meta, end = '')
+        meta = [fileinput.filename(), fileinput.fileno(), fileinput.filelineno(),
+                fileinput.isfirstline(), fileinput.isstdin()]
+        print(*meta, end='')
         print(line, end='')
 
 
@@ -57,7 +57,9 @@ def raise_except():
     # exit(6)
     raise SystemExit("error msg")
 
+
 import getpass
+
 
 def get_pass():
     """
@@ -67,6 +69,7 @@ def get_pass():
     user = getpass.getuser()
     passwd = getpass.getpass("enter your passwd: ")
     print(user, passwd)
+
 
 if __name__ == '__main__':
     # std_in()
