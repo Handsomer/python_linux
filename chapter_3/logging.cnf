@@ -12,7 +12,7 @@ handlers = logfile
 
 [handler_logfile]
 class = handlers.TimedRotatingFileHandler
-args = ('app.log', 'mindnight', 1, 10)
+args = ('app.log', 'midnight', 1, 10)
 level = DEBUG
 formatter = generic
 
