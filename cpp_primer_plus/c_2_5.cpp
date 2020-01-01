@@ -2,13 +2,13 @@
 #include <iostream>
 void simon(int);
 
-int mian()
+int main()
 {
     using namespace std;
     simon(3);
     cout<<" Pick an integer:";
-    int count;
-    cin >> count;
+    int count = 100;
+    //cin >> count;//如果使用cin 在mac 下需要设置externalConsole": true
     simon(count);
     cout<<"Done!"<<endl;
     return 0;
